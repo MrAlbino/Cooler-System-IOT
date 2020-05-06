@@ -5,7 +5,6 @@ import java.util.concurrent.Callable;
 public class MerkeziIslemBirimi implements IMerkeziIslemBirimi{
 
     private IEyleyici eyleyici;
-    private IAgArayuzu agArayuzu;
     private ISicaklikAlgilayici sicaklikAlgilayici;
     public MerkeziIslemBirimi(){
         eyleyici= Eyleyici.getInstance();
