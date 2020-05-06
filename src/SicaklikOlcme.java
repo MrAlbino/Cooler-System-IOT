@@ -17,6 +17,6 @@ public class SicaklikOlcme implements IIslem {
 
     @Override
     public void islemYap() {
-        System.out.println("Sıcaklık: "+Math.abs(random.nextInt()%100));
+        System.out.print("Sıcaklık: ");
     }
 }

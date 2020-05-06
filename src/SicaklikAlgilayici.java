@@ -5,10 +5,12 @@ public class SicaklikAlgilayici implements ISicaklikAlgilayici{
     private Random random=new Random();
     private static SicaklikAlgilayici instance;
     private ISubject publisher;
+    private IIslem islem;
 
 
     private SicaklikAlgilayici(ISubject publisher){
         this.publisher=publisher;
+        this.islem=SicaklikOlcme.getInstance();
     }
 
     public static SicaklikAlgilayici getInstance(ISubject publisher){
@@ -24,7 +26,8 @@ public class SicaklikAlgilayici implements ISicaklikAlgilayici{
     public void sicaklikOku() {
         sicaklik=Math.abs(random.nextInt()%100);
 
-        System.out.println("Sıcaklık: "+sicaklik);
+        islem.islemYap();
+        System.out.println(sicaklik);
 
         if(sicaklik>60){
             publisher.notify("Sıcaklık 60 derecenin üzerine çıktı, soğutucuyu açmanız tavsiye edilir..");
