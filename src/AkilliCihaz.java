@@ -23,6 +23,7 @@ public class AkilliCihaz {
         }
         return instance;
     }
+
     public void basla(){
         agArayuzu.mesajGoruntule("Cihaz başlatılıyor..");
         agArayuzu.mesajGoruntule("Kullanıcı adı ve şifre giriniz..");

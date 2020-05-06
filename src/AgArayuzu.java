@@ -41,4 +41,5 @@ public class AgArayuzu implements IAgArayuzu{
     public void sicaklikGonder(){
         merkeziIslemBirimi.sicaklikAlgilayiciyaGonder();
     }
+
 }

@@ -9,7 +9,9 @@ public class MerkeziIslemBirimi implements IMerkeziIslemBirimi{
     private ISicaklikAlgilayici sicaklikAlgilayici;
     public MerkeziIslemBirimi(){
         eyleyici= Eyleyici.getInstance();
-        sicaklikAlgilayici=SicaklikAlgilayici.getInstance();
+        sicaklikAlgilayici=SicaklikAlgilayici.getInstance(new Publisher());
+        sicaklikAlgilayici.aboneEkle(new Subscriber1());
+        sicaklikAlgilayici.aboneEkle(new Subscriber2());
     }
 
     public void eyleyiciyeGonder(String secim){
