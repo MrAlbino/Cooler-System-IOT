@@ -1,7 +1,6 @@
 import java.util.Random;
 
 public class SicaklikOlcme implements IIslem {
-    private Random random=new Random();
     private static SicaklikOlcme instance;
 
     private SicaklikOlcme(){
