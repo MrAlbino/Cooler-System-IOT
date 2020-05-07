@@ -4,7 +4,7 @@ public class SogutucuVeritabaniPostgreSQL implements ISogutucuVeritabani{
 
     private static SogutucuVeritabaniPostgreSQL instance;
     private static String userName="postgres";
-    private static String password="159753123ak";
+    private static String password="ayberk";
     private static String dbUrl="jdbc:postgresql://localhost:5432/AkilliCihazUygulama";
 
     private SogutucuVeritabaniPostgreSQL(){
@@ -43,7 +43,7 @@ public class SogutucuVeritabaniPostgreSQL implements ISogutucuVeritabani{
 
             conn.close();
 
-            if(rs.next()==false){
+            if(!rs.next()){
                 return false;
             }
             else{
